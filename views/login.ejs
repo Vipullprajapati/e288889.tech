@@ -5,6 +5,15 @@
     <%- include('includes/header') %>
 
     <main>
+      <% if(errors.length > 0) { %>
+      <p><mark style="background: tomato">Errors</mark></p>
+      <ul>
+        <% errors.forEach((error) => { %>
+        <li><%= error %></li>
+        <% }) %>
+      </ul>
+      <% } %>
+
       <form action="#" method="POST">
         <fieldset>
           <legend>Log In</legend>
